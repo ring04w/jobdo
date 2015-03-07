@@ -1,1 +1,1 @@
-changed instruction
+Implementation of  algorithm which in 《Algorithm》(4th Edition) of Sedgewick and Kevin Wayne by C++.
