@@ -1,3 +1,8 @@
+// Source : Algorithms 4th Edition
+//Robert Sedgewick and Kevin Wayne
+// Author : ring04w
+// Date   : 2015-03-07
+
 #include <iostream>
 using namespace std;
 
