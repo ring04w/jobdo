@@ -8,11 +8,11 @@ int gcd(int m, int n)
 	r = m % n;
 	while(r != 0)
 	{
-		p = q;
-		q = r;
+		m = n;
+		n = r;
 		r = m % n;
 	}
-	return r;
+	return n;
 }
 
 int main(int argc, char const *argv[])
