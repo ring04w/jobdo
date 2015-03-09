@@ -2,6 +2,7 @@
 //Robert Sedgewick and Kevin Wayne
 // Author : ring04w
 // Date   : 2015-03-07
+//update: 2015-03-09
 
 
 
@@ -37,6 +38,12 @@ int binarySearch(int array[], int key, int N)
 	int keyPosition;
 	cout<<"Please input the integer you want to find:"<<endl<<">>>";
 	cin>>keyInteger;
+	for(i = 0; i < sizeof(arr)/sizeof(int); i++)
+	{
+		if(arr[i] != keyInteger)
+			break;
+		
+	} 
 
 	keyPosition =  binarySearch(arr, keyInteger, 10);
 	cout<<"The position of integer you want to find in the  array is "<<keyPosition<<endl;
