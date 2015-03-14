@@ -1,1 +1,21 @@
-Implementation of  algorithm which in 《Algorithm》(4th Edition) of Sedgewick and Kevin Wayne by C++.
+﻿Implementation of  algorithm which in 《Algorithm》(4th Edition) of Sedgewick and Kevin Wayne by C++.
+
+
+Field:
+1.程序设计+算法+操作系统
+2.Qt软件编写
+3.Android平台恶意软件检测（论文）
+
+技能add：
+
+git
+
+算法工程师：
+数据结构+ 机器学习的几个算法（SVM）
+
+
+计算机科学基础：
+
+数据结构+算法
+操作系统
+微机原理
