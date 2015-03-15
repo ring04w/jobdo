@@ -61,7 +61,7 @@ int main(int argc, char const *argv[])
 		for(j = 0; j < N; ++j)
 			{
 				cout<<a[i][j];
-				cout<<"\n";
+				cout<<endl;
 			}
 	return 0;
 }
