@@ -50,31 +50,18 @@ void ijOfArrayComprime(int a[N][N], int N)
 
 int main(int argc, char const *argv[])
 {
-	/***********
-	int isM;
-	isM = isPrime(16, 24);
-	if(isM)
-		cout<<"16 and 24 is  comprime"<<endl;
-	else
-		cout<<"16 and 24 is not  comprime"<<endl;
-*********/
-	//int M;
-	//int N;
+	
 	int i;
 	int j;
 	int a[N][N];
-//	cout<<"Please input the line and row of the array"<<endl<<">>>";
-//	cin>>M>>N;
+/
 	ijOfArrayComprime(a, N);
 	
 	for(i = 0; i < N; ++i)
 		for(j = 0; j < N; ++j)
 			{
 				cout<<a[i][j];
-				cout<<endl;
+				cout<<"\n";
 			}
-
-
-
 	return 0;
 }
