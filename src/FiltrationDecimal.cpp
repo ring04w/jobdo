@@ -1,32 +1,24 @@
 // Source : Algorithms 4th Edition
 //Robert Sedgewick and Kevin Wayne
 // Author : ring04w
-// Date   : 2015-03-16
-
-//Need to review
+// Date   : 2015-03-17
+//第K小的数
+//随机输出数组元素
 
 #include <iostream>
 using namespace std;
 
-
-int int main(int argc, char const *argv[])
+void ArrayInput(int a[], int N)
 {
-	int N;
-	double array[N];
 	int i;
-	double max;
-	double min;
-	double temp;
-	int sum = 0;
-	int sumN = 0;
-	int averageNum;
-	int moreThanAverage = 0;
 	for(i = 0; i < N; ++i)
-	{
-		cin>>array[i];
-	}
+		cin>>a[i];
+}
 
-	max = array[0];
+void MaxValueOfArrayOutput(int a[], int N)
+{
+	int max;
+	max = a[0];
 	for(i = 0; i < N; ++i)
 	{
 		if(array[i] >= max)
@@ -34,20 +26,28 @@ int int main(int argc, char const *argv[])
 	}
 	cout<<"The biggest decimal is "<<max<<endl;
 	cout<<"----------------------------------------"<<endl;
+}
 
-
-	min = array[0];
+void MinValueOfArrayOutput(int a[], int N)
+{
+	int min;
+	min = a[0];
 	for(i = 0; i < N; ++i)
 	{
 		if(array[i] <= min)
 			min = array[i];
 	}
-	cout<<"The smallest decimal is "<<min<<endl;
+	cout<<"The least decimal is "<<min<<endl;
 	cout<<"----------------------------------------"<<endl;
+}
 
-//bubble Sort
-	for(j = 1; j < N-1; ++j)
-		for(i = 0; i < n-j; ++i)
+void BubbleSortAndOutput(int a[], int N)
+{
+	int temp;
+	int i;
+	int j;
+	for(j = 1; j < N - 1; ++j)
+		for(i = 0; i < N - j; ++i)
 		{
 			if(a[i] > a[i + 1])
 			{
@@ -55,56 +55,125 @@ int int main(int argc, char const *argv[])
 				a[i] = a[i + 1];
 				a[i + 1] = temp;
 			}
-				
 		}
-
-		for(i = 0; i < n; ++i)
+	cout<<"The original array is "<<endl;
+		for(i = 0; i < N; ++i)
 			cout<<a[i]<<" ";
-
-		cout<<a[k-1]<<endl;
-
-
-		//median number
-
-		if(N % 2 == 0)
-			cout<<"The median number are "<<a[N/2]<<", "<<a[N/2 + 1]<<endl;
-		else
-			cout<<"The median number is "<<a[(N + 1)/2]<<endl;
-
-		//square sum
-		for(i = 0; i < N; ++i){
-			sum += a[i]*a[i];
-		}
-
-		cout<<"The square sum of numbers is "<<sum<<endl;
-
-		//average number
-
-		for(i = 0; i < N; ++i)
-		{
-			sumN += a[i];
-		}
-
-		averageNum = sumN / N;
-		cout<<"The average number of the array is "<<averageNum<<endl;
-
-		//percentage
-
-
-		for(i = 0; i < N; ++i)
-		{
-			if(a[i] > averageNum)
-				moreThanAverage++;
-		}
-
-		cout<<"The percentage of numbers which more than the average number is "<<100*(moreThanAverage/N)<<"%"<<endl;
-
-		//random output all elements ?? 
-		//
-
-		cout<<a[rand() % N]<<" ";
-
-
-
-	return 0;
+	cout<<"----------------------------------------"<<endl;
 }
+
+void KthDecimalOfArrayOutput(int a[])
+{
+	int k;
+	cout<<"Please input the K"<<endl<<">>>";
+	cin>>k;
+	cout<<"The Kth least decimal is "<<endl;
+	cout<<a[k - 1]<<endl;
+	cout<<"----------------------------------------"<<endl;
+
+
+}
+
+
+void MedianDecimalOutput(int a[], int N)
+{
+	cout<<"The median decimal of the array is "<<endl;
+	if(N % 2 == 0)
+		cout<<a[(N / 2) - 1]<<" "<<a[N / 2]<<endl;
+	else
+		cout<<a[(N - 1) / 2]<<endl;
+	cout<<"----------------------------------------"<<endl;
+}
+
+void SquareSumOfArrayOutput(int a[], int N)
+{
+	int SquareSum = 0;
+	int i;
+	for(i = 0; i < N; ++i)
+	{
+		SquareSum += a[i]*a[i];
+	}
+	cout<<"The square sum of the array is "<<SquareSum<<endl;
+	cout<<"----------------------------------------"<<endl;
+}
+
+void AverageOfSumValue(int a[], int N)
+{
+	int sum;
+	int i;
+	int AverageOfSum;
+	for(i = 0; i < N; ++i)
+	{
+		sum += a[i];
+	}
+	AverageOfSum = sum / N;
+	cout<<"The average value of the array is  "<<AverageOfSum<<endl;
+	cout<<"----------------------------------------"<<endl;
+}
+
+void MoreThanAverageValueOfArrayOutput(int a[],  int N)
+{
+	int moreThanAve = 0;
+	for(i = 0; i < N; ++i)
+	{
+		if(a[i] > AverageOfSum)
+			moreThanAve++;
+	}
+	cout<<"The percentage of decimal  which more than agerage value is "<<(double)(100*moreThanAve) / N<<"%"<<endl;
+	cout<<"----------------------------------------"<<endl;
+}
+
+
+
+
+//生成一个范围的不重复随机数
+void GetRandomSquare(int a[], int N, int output[])
+{
+	int originLength = N;
+	for(i = 0; i < N; ++i)
+	{
+		num = rand() % N;
+		output[i] = a[num];
+		a[num] = a[N - 1];
+		N--;
+	}
+
+	for(i = 0; i < originLength; ++i)
+		{
+			cout<<output[i]<<" "<<endl;
+		}
+}
+
+
+//将GetRandomSquare()生成的数组当成原小数数组的角标进行输出
+void ArrayRandomOutput(int a[], int N, int output[])
+{
+	for(i = 0; i < N; ++i)
+	{
+		cout<<a[output[i]]<<" ";
+	}
+}
+
+
+int main(int argc, char const *argv[])
+{
+	int a[100];
+	int N;
+	int output[100];
+	ArrayInput(a, N);
+	MaxValueOfArrayOutput(a, N);
+	MinValueOfArrayOutput(a, N);
+	BubbleSortAndOutput(a, N);
+	KthDecimalOfArrayOutput(a);
+	MedianDecimalOutput(a, N);
+	SquareSumOfArrayOutput(a, N);
+	AverageOfSumValue(a, N);
+	MoreThanAverageValueOfArrayOutput(a, N);
+	GetRandomSquare(a, N, output);
+	ArrayRandomOutput(a, N, output);
+	return 0;
+
+
+}
+
+
