@@ -8,7 +8,7 @@
 #include <time.h>
 using namespace std;
 
-int int main(int argc, char const *argv[])
+int main(int argc, char const *argv[])
 {
 	clock_t startTime;
 	clock_t finishTime;
@@ -20,7 +20,7 @@ int int main(int argc, char const *argv[])
 
 	totalTime = finishTime - startTime;
 	cout<<totalTime<<endl;
-	
+
 
 
 	return 0;
