@@ -37,7 +37,7 @@ int int main(int argc, char const *argv[])
 	cout<<"Please input the integer you want to find:"<<endl<<">>>";
 	cin>>keyInteger;
 
-	keyPosition =  binarySearch(arr, keyInteger, 10);
+	keyPosition =  BinarySearch(arr, keyInteger, 10);
 	cout<<"The position of integer you want to find in the  array is "<<keyPosition + 1<<endl;
 
 	return 0;
