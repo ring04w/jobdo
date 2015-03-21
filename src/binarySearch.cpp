@@ -27,7 +27,7 @@ int BinarySearch(int a[], int key, int N)
 	return -1;
 }
 
-int int main(int argc, char const *argv[])
+int main(int argc, char const *argv[])
 {
 	
 	int  arr[] = {-9, -4, -1, 0, 6, 7, 9, 10, 20, 50};
