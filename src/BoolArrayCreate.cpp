@@ -54,7 +54,7 @@ int main(int argc, char const *argv[])
 	int i;
 	int j;
 	int a[N][N];
-/
+
 	ijOfArrayComprime(a, N);
 	
 	for(i = 0; i < N; ++i)
