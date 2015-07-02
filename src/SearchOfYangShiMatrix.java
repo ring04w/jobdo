@@ -1,3 +1,11 @@
+// Source : Algorithms Learning
+// Author : ring04w
+// Date   : 2015-07-02
+
+
+
+
+
 public class SearchOfYangShiMatrix{
 	public bool searchMatrix(vector<vector><int> &matrix, int target){
 		int m = matrix.size();
