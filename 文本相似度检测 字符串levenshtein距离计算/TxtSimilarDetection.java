@@ -23,11 +23,11 @@ class TxtSimilarDetection{
 		int[][] diff = new int[str1.length()][str2.length()];
 		
 		for (int i = 0; i < str1.length(); i++) {
-			diff[i][0] = i + 1;
+			diff[i][0] = i;
 		}
 		
-		for (int i = 0; i < str2.length(); i++) {
-			diff[0][i] = i + 1;
+		for (int j = 0; j < str2.length(); j++) {
+			diff[0][j] = j;
 			
 		}
 		
@@ -41,7 +41,7 @@ class TxtSimilarDetection{
 				}else {
 					temp = 1;
 				}
-				diff[i][j] = min(diff[i-1][j-1] + temp, diff[i][j-1], diff[i-1][j]);	
+				diff[i][j] = min(diff[i-1][j-1] + temp, diff[i][j-1] + 1, diff[i-1][j] + 1);	
 			}		
 			
 		}
