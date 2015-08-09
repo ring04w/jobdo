@@ -1,6 +1,6 @@
 
 class Solution{
-	public boolean findInYangshiMatrix(int[][] &array, int target){
+	public boolean findInYangshiMatrix(int[][] array, int target){
 		int m = array.length;
 		int n = array[0].length;
 
