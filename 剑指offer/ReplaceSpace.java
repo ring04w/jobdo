@@ -25,5 +25,10 @@ class Solution{
 				if(i == j)
 					return ;
 			}
+
+
+			for(int i = 0; i < newLength; ++i){
+				str[i];
+			}
 		}
 }
