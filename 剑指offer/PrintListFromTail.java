@@ -14,8 +14,8 @@ class Solution{
 		}
 
 		while(!s.isEmpty()){
-			int v = s.top();
-			print(v);
+			ListNode *v = s.top();
+			print(v.value);
 			s.pop();
 		}
 	}
