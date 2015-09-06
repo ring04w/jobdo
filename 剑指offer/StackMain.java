@@ -11,7 +11,7 @@ public class StackMain {
         if (min_s.empty() || val < min_s.top) {
             min_s.push(val);
         } else {
-            min_s.push(min_s.top());
+            min_s.push(min_s.top());//否则就把目前元素再压栈一次
         }
  
     }
@@ -32,5 +32,3 @@ public class StackMain {
     }
      
 }
-收藏
-纠错
